@@ -1,9 +1,12 @@
-function App() {
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import NotFound from './pages/NotFound/NotFound';
+
+export default function App() {
   return (
-    <div>
-      <h1>Hello World! Vite + React + Typescript</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
-
-export default App;
